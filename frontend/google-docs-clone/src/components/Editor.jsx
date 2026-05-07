@@ -90,6 +90,7 @@ function Editor() {
     }, [quill])
 
     useEffect(()=>{
+        const socket = socketRef.current
         if(socket == null || quill == null) return
         const interval = setInterval(()=>{
             socket.emit('save-document', quill.getContents())
@@ -100,7 +101,7 @@ function Editor() {
             clearInterval(interval)
         }
 
-    }, [socket,  quill])
+    }, [quill])
 
     useEffect(() => {
         const wrapper = wrapperRef.current
