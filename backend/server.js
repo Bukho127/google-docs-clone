@@ -11,7 +11,7 @@ const io = require('socket.io')(3001, {
 
 const defaultValue = " "
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI )
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('MongoDB connection error:', err))
 
