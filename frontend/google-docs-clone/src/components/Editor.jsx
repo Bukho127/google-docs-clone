@@ -3,6 +3,7 @@ import "quill/dist/quill.snow.css";
 import Quill from "quill";
 import { io } from "socket.io-client"
 import { useParams } from 'react-router-dom';
+import ShareButton from './ShareButton';
 
 const SAVE_INTERVAL_MS = 2000
 const TOOLBAR_OPTIONS = [
@@ -127,8 +128,11 @@ function Editor() {
         <>
             <div style={{ position: "fixed", bottom: 8, right: 8, zIndex: 1000 }}>
                 Socket: {socketStatus}
+                 <ShareButton />
             </div>
-            <div id='container' ref={wrapperRef}></div>
+           
+            <div id='container' ref={wrapperRef}>
+            </div>
         </>
     )
 }
