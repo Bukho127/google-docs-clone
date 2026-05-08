@@ -1,4 +1,4 @@
-# 📝 Google Docs Clone (Real-Time Collaborative Editor)
+# Google Docs Clone (Real-Time Collaborative Editor)
 
 A full-stack real-time collaborative document editor inspired by Google Docs. Multiple users can create, edit, and sync documents simultaneously with live updates.
 
